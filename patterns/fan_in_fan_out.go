@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func worker(id int, ch chan int) {
+func workerFIFO(id int, ch chan int) {
     for i := range 5 {
 		time.Sleep(time.Millisecond * time.Duration(rand.Intn(500)))
         ch <- i + id*100 
@@ -16,7 +16,7 @@ func worker(id int, ch chan int) {
 func RunFanInFanOut() {
     ch := make(chan int, 10)
     for i := range 3 {
-        go worker(i, ch) 
+        go workerFIFO(i, ch) 
     }
 
     for range 15 {
