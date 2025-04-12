@@ -5,5 +5,5 @@ import (
 )
 
 func main()  {
-	patterns.RunWorkerPool()
+	patterns.RunPipeline()
 }
