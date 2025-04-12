@@ -5,5 +5,5 @@ import (
 )
 
 func main()  {
-	patterns.RunPipeline()
+	patterns.RunPubSub()
 }
