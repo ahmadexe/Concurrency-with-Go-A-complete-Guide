@@ -5,7 +5,7 @@ import (
     "time"
 )
 
-func work(done chan bool) {
+func work(done chan<- bool) {
     time.Sleep(2 * time.Second)
     done <- true
 }
