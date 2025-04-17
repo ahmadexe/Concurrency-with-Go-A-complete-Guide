@@ -1,9 +1,7 @@
 package main
 
-import (
-	"github.com/ahmadexe/concurrency-with-go/basics"
-)
+import "github.com/ahmadexe/concurrency-with-go/patterns"
 
 func main()  {
-	basics.RunTimeOut()
+	patterns.RunWorkerPool()
 }

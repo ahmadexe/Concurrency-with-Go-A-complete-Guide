@@ -6,7 +6,7 @@ func generate(nums ...int) <-chan int {
 	out := make(chan int)
 	go func() {
 		for _, n := range nums {
-			out <- n
+			out <- n * 10
 		}
 		close(out)
 	}()
